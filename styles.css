@@ -1,0 +1,118 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Barlow Semi Condensed',sans-serif;
+     font-size: 1.3rem;
+     padding:15px 10px ;
+     background-color: rgb(231,232,238);
+     font-weight: 500;
+     display: grid;
+     padding-bottom: 4rem;
+     gap: 2rem;
+}
+blockquote{
+    margin: 0;
+}
+article{
+    color:hsl(210, 46%, 95%) ;
+
+}
+.one,.two,.four{
+    color:hsl(210, 46%, 95%) ;
+}
+article{
+    margin-inline: auto;
+    padding: 1.8rem;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+
+    /* width: 360px; */
+    /* border: 1px solid red; */
+    line-height: 2rem;
+}
+h2,p{
+    color:hsl(210, 46%, 95%);
+}
+p{
+    opacity: 0.5;
+}
+.bg{
+    position: absolute;
+    /* z-index: -1; */
+     right: 10%;
+     opacity: 0.3;
+     top: 1.4%;
+
+}
+.highlight{
+    font-weight:600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    margin-block: 2rem;
+}
+.customer{
+    border-radius: 28px;
+    width: 40px;
+    margin-right:1.4rem
+}
+.q h2,.q p{
+margin: 0;
+}
+.row{
+    display: flex;
+}
+blockquote:last-child{
+    margin-bottom: 1.4rem;
+}
+.one{
+    background-color:  hsl(263, 55%, 52%);
+}
+.two{
+    background-color:hsl(217, 19%, 35%) ;
+}
+.four{
+    background-color: hsl(219, 29%, 14%);
+}
+.five,.three{
+    background-color: white;
+    color: rgb(37, 29, 29);
+}
+.five h2,.five p{
+    color: rgb(103, 72, 72);
+}
+.three h2,.three p{
+    color: rgb(103, 72, 72);
+
+}
+@media screen and (min-width:784px) {
+    body{
+        grid-template-columns: repeat(4 ,230px);
+        grid-template-areas: 
+        "one one two five"
+        "three four four five"
+        ;
+        justify-content: center;
+
+    }
+    .one{
+        grid-area: one;
+    }
+    .two{
+        grid-area: two;
+    }
+    .three{
+        grid-area: three;
+    }
+    .four{
+        grid-area: four;
+    }
+    .five{
+        grid-area: five;
+    }
+}
